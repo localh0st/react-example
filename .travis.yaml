@@ -3,5 +3,15 @@ services:
   - docker
 
 script: 
-  - docker build -t react-app .
+  - docker build -t localh0st/test-react-frontend2 .
+  - docker images localh0st/test-react-frontend2
+
+before_deploy:
+  - docker login -u localh0st -p D4cue8MobwgNm1KI4GvF
+
+deploy:
+  provider: script
+  script: docker push localh0st/test-react-frontend2
+  on:
+    branch: master
   
