@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        WOOT! REACT IN DOCKER CONTAINER!
+        HELLO FUCKIN WORLD
       </div>
     );
   }
